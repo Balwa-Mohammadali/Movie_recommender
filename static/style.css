@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:white;
+    min-height:100vh;
+    padding:30px;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+}
+
+/* Header */
+
+.hero{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.hero p{
+    color:#cbd5e1;
+}
+
+/* Search */
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:50px;
+    flex-wrap:wrap;
+}
+
+select{
+    width:400px;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+button{
+    padding:14px 25px;
+    border:none;
+    border-radius:10px;
+    background:#ff4d4d;
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* Movies Grid */
+
+.movie-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+/* Card */
+
+.movie-card{
+    width:180px;
+    background:#1e293b;
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.movie-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Poster */
+
+.poster-wrapper{
+    width:100%;
+    height:250px;
+    overflow:hidden;
+}
+
+.poster-wrapper img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.movie-card:hover img{
+    transform:scale(1.08);
+}
+
+/* Movie Name */
+
+.movie-info{
+    padding:12px;
+}
+
+.movie-info h3{
+    font-size:14px;
+    text-align:center;
+    line-height:1.4;
+    min-height:40px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .movie-card{
+        width:150px;
+    }
+
+    .poster-wrapper{
+        height:220px;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    select,
+    button{
+        width:100%;
+    }
+}
